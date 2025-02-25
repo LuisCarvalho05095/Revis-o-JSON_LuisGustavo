@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monstros S.A.</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000080;
+            color: white;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            background-color: #0044cc;
+            padding: 15px;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #0044cc;
+            padding: 15px;
+        }
+        .brand {
+            flex-grow: 1;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: w
+            hite;
+        }
+        .brand img {
+            width: 200px; 
+            height: auto;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin: 40px auto;
+            width: 80%;
+            gap: 40px;
+        }
+        .text-content {
+            max-width: 40%; 
+            padding: 20px;
+            font-size: 14px;
+            line-height: 1.5;
+            text-align: justify;
+        }
+        .carousel {
+            width: 600px; 
+            height: 700px;
+            overflow: hidden;
+            position: relative;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .carousel img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            display: none;
+        }
+        .carousel img.active {
+            display: block;
+        }
+        .footer {
+            margin-top: 20px;
+            background-color: #0066ff;
+            padding: 10px;
+        }
+        .footer {
+            margin-top: 20px;
+            background-color: #0066ff;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .footer p {
+            margin: 5px 0;
+        }
+        @media (max-width: 600px) {
+            .footer {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div>
+            <a href="index.html">Home</a>
+            <a href="sobrenos.html">Sobre a empresa</a>
+        </div>
+        <div class="brand">
+            <img src="IMG/Daco_2728304.png" alt="Monsters, Inc.">
+        </div>
+        <div>
+            <a href="cadastro.html">Cadastro</a>
+            <a href="login.html">Login</a>
+            <a href="delete.html">Minha Conta</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="text-content">
+            <h1>Sobre Nós – Monstros S.A.</h1>
+            <p>Bem-vindo à Monstros S.A., a maior e mais eficiente fornecedora de energia de Monstrópolis!</p>
+            <p>Nossa missão é garantir que cada casa e empresa da cidade tenha a energia necessária para funcionar perfeitamente.</p>
+            <p>Acreditamos que o medo move o mundo—literalmente! Nossa inovadora tecnologia transforma os gritos das crianças em energia limpa e sustentável, garantindo o progresso da nossa sociedade.</p>
+            <p>Nossos funcionários altamente treinados, incluindo os melhores Assustadores da indústria, trabalham incansavelmente para coletar os gritos mais poderosos e manter Monstrópolis iluminada.</p>
+            <p>Com o tempo, aprendemos que a risada é ainda mais poderosa do que o grito, e estamos passando por uma revolução energética!</p>
+            <p>Graças à inovação liderada por nossos talentos excepcionais, como James P. Sullivan e Mike Wazowski, estamos inaugurando uma nova era de energia renovável baseada na alegria e no riso das crianças.</p>
+            <p>Somos mais do que uma empresa: somos uma família de monstros comprometidos com um futuro mais brilhante e sustentável para Monstrópolis.</p>
+            <p><strong>Monstros S.A. – "Nós assustamos porque nos importamos!"</strong></p>
+        </div>
+        <div class="carousel">
+            <img src="IMG/area 2.jpg" alt="Imagem 1" class="active">
+            <img src="IMG/sobre_MSA.jpg" alt="Imagem 2">
+            <img src="IMG/sobre_MSA.jpg" alt="Imagem 3">
+        </div>
+    </div>
+
+    <div class="footer">
+        Desenvolvido por Monstros S.A.
+        <p>&copy; 2025</p>
+    </div>
+
+    <script>
+        let index = 0;
+        const images = document.querySelectorAll(".carousel img");
+
+        function changeImage() {
+            images[index].classList.remove("active");
+            index = (index + 1) % images.length;
+            images[index].classList.add("active");
+        }
+
+        setInterval(changeImage, 3000);
+    </script>
+</body>
+</html>
